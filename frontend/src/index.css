@@ -1,0 +1,173 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* Map container styles */
+.appointment-map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.appointment-map-container .leaflet-container {
+  border-radius: 12px;
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.leaflet-popup-content {
+  margin: 10px 14px;
+  font-size: 14px;
+}
+
+/* Direction line animation */
+@keyframes dash-animation {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-subtle {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Animation utilities */
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
+/* Delay utilities for staggered animations */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
+}
+
+/* Custom scrollbar - Professional Navy Theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3a5f;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base body styling */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus styles for accessibility - Navy Blue */
+*:focus-visible {
+  outline: 2px solid rgba(30, 58, 95, 0.5);
+  outline-offset: 2px;
+}
+
+/* Form input styling for select dropdown options */
+select option {
+  background: #ffffff;
+  color: #0f172a;
+}
